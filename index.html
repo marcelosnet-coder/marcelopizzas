@@ -3,57 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mary’s Pizzaria 🍕</title>
+  <title>Mary's Pizzaria 🍕</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Mary’s Pizzaria 🍕</h1>
-  </header>
-
+  <header>Mary's Pizzaria 🍕</header>
   <main class="container">
-    <!-- Tela inicial -->
-    <section id="inicio" class="tela ativa">
-      <h2>Bem-vindo!</h2>
-      <p>Monte sua pizza e faça seu pedido direto pelo WhatsApp!</p>
-      <button onclick="abrirTela('sabores')">🍕 Escolher Pizza</button>
-      <button onclick="abrirTela('combos')">🥤 Combos & Bebidas</button>
-    </section>
-
-    <!-- Escolha de sabores -->
-    <section id="sabores" class="tela">
-      <h2>Escolha sua opção</h2>
-      <button onclick="abrirTela('um-sabor')">1 Sabor</button>
-      <button onclick="abrirTela('dois-sabores')">2 Sabores</button>
-      <button class="voltar" onclick="abrirTela('inicio')">⬅ Voltar</button>
-    </section>
-
-    <!-- Pizza de 1 sabor -->
-    <section id="um-sabor" class="tela">
-      <h2>Escolha seu sabor 🍕</h2>
-      <div class="menu" id="menu1"></div>
-      <button class="voltar" onclick="abrirTela('sabores')">⬅ Voltar</button>
-    </section>
-
-    <!-- Pizza de 2 sabores -->
-    <section id="dois-sabores" class="tela">
-      <h2>Escolha os dois sabores 🍕</h2>
-      <div class="menu" id="menu2a"></div>
-      <div class="menu" id="menu2b"></div>
-      <button onclick="confirmarDoisSabores()">✅ Confirmar</button>
-      <button class="voltar" onclick="abrirTela('sabores')">⬅ Voltar</button>
-    </section>
-
-    <!-- Combos e bebidas -->
-    <section id="combos" class="tela">
-      <h2>Combos & Bebidas 🥤</h2>
-      <div class="menu" id="menuCombos"></div>
-      <button class="voltar" onclick="abrirTela('inicio')">⬅ Voltar</button>
-    </section>
+    <h2>Monte sua pizza</h2>
+    <div id="menu" class="menu"></div>
+    <div class="carrinho">
+      <h3>Carrinho</h3>
+      <ul id="carrinho-lista"></ul>
+      <p id="total"></p>
+      <button id="btn-whatsapp">Enviar Pedido no WhatsApp</button>
+    </div>
   </main>
 
-  <footer>© 2025 Mary’s Pizzaria - Feito com ❤️ por Marcelo</footer>
+  <!-- Modal para segundo sabor -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h3>Escolha o segundo sabor 🍕</h3>
+      <ul id="lista-sabores"></ul>
+      <button id="confirmar-sabor">Confirmar</button>
+    </div>
+  </div>
 
-  <script src="script.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
