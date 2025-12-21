@@ -2,21 +2,46 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>MARY'S PIZZA</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mary's Pizza</title>
+<link rel="stylesheet" href="style.css">
 </head>
-<body class="page1">
-    <div class="container">
-        <h1>MARY'S PIZZA</h1>
-        <p class="info">(81) 9 9185-1200<br>Rua Dr. Sebastião Amaral, 1203 – Pau Amarelo</p>
-        <img class="hero" src="https://images.unsplash.com/photo-1601924994987-69e26d694786" />
-        <button onclick="window.location.href='cardapio.html'">FAÇA SEU PEDIDO ONLINE</button>
+<body>
 
-        <h2>Acesse também pelo QR Code</h2>
-        <img id="qr" alt="QR Code"
-         src="https://chart.googleapis.com/chart?cht=qr&chs=300x300&chl=https%3A%2F%2Fmarcelosnet-coder.github.io%2Fmarcelopizzas&choe=UTF-8" />
-    </div>
+<section id="home" class="page active fade">
+  <img src="logo.png" class="logo">
+  <h1>MARY'S PIZZA</h1>
+  <p>📞 (81) 9 9185-1200</p>
+  <p>📍 Rua Dr. Sebastião Amaral, 1203 – Pau Amarelo</p>
+  <img src="pizza.jpg" class="hero">
+  <button onclick="goPage('menu')">Faça seu pedido online</button>
+</section>
+
+<section id="menu" class="page fade">
+  <h2>Pizzas</h2>
+  <div class="grid" id="pizzaList"></div>
+  <h2>Bebidas</h2>
+  <div class="grid" id="drinkList"></div>
+  <button onclick="goPage('order')">Avançar</button>
+</section>
+
+<section id="order" class="page fade">
+  <h2>Monte sua Pizza 🍕</h2>
+  <select id="qtd" onchange="updateChoice()">
+    <option value="1">1 sabor</option>
+    <option value="2">2 sabores</option>
+  </select>
+
+  <div id="board"></div>
+
+  <input placeholder="Nome" id="nome">
+  <input placeholder="Endereço" id="endereco">
+  <input placeholder="Telefone" id="fone">
+
+  <button onclick="sendWhats()">Finalizar Pedido</button>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
