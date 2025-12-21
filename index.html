@@ -1,103 +1,22 @@
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>MARY'S PIZZA - Cardápio</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>MARY'S PIZZA</title>
 </head>
-<body>
-  <main id="app">
-    <!-- Página 1 - Capa -->
-    <section id="page-cover" class="page active">
-      <div class="cover-content">
+<body class="page1">
+    <div class="container">
         <h1>MARY'S PIZZA</h1>
-        <p class="contact">Telefone: <a href="tel:+5581991851200">81 9 9185-1200</a></p>
-        <p class="address">Rua Dr. Sebastião Amaral, 1203 — Pau Amarelo</p>
-        <img class="hero" alt="Pizza deliciosa" src="https://source.unsplash.com/900x600/?pizza,pepperoni" />
-        <button class="btn" id="btn-pedido">FAÇA SEU PEDIDO ONLINE</button>
-        <p class="small">ou escaneie o QR code</p>
-        <img id="qr" alt="QR Code" src=https://"github.com/marcelosnet-coder/marcelopizzas.git" />
-      </div>
-    </section>
+        <p class="info">(81) 9 9185-1200<br>Rua Dr. Sebastião Amaral, 1203 – Pau Amarelo</p>
+        <img class="hero" src="https://images.unsplash.com/photo-1601924994987-69e26d694786" />
+        <button onclick="window.location.href='cardapio.html'">FAÇA SEU PEDIDO ONLINE</button>
 
-    <!-- Página 2 - Lista de sabores -->
-    <section id="page-menu" class="page">
-      <header class="menu-header">
-        <button class="back" data-target="page-cover">← Voltar</button>
-        <h2>Cardápio</h2>
-        <button id="btn-bebidas" class="btn small">Bebidas</button>
-      </header>
-
-      <div class="menu-list" id="menu-list">
-        <!-- cards gerados por script.js -->
-      </div>
-    </section>
-
-    <!-- Página 3 - Montar pedido e checkout -->
-    <section id="page-choose" class="page">
-      <header class="menu-header">
-        <button class="back" data-target="page-menu">← Voltar</button>
-        <h2>Montar Pedido</h2>
-      </header>
-
-      <div class="choose-box">
-        <label>Quantos sabores?</label>
-        <div class="option-row">
-          <button class="option" data-value="1">1</button>
-          <button class="option" data-value="2">2</button>
-        </div>
-
-        <div id="single-choice" class="flavor-block">
-          <label>Escolha o sabor</label>
-          <select id="flavor1"></select>
-        </div>
-
-        <div id="double-choice" class="flavor-block hidden">
-          <label>Escolha os 2 sabores</label>
-          <div class="double-row">
-            <select id="flavorA"></select>
-            <select id="flavorB"></select>
-          </div>
-          <div class="pizza-half" id="pizza-half">
-            <div class="half left" id="halfA">Sabor A</div>
-            <div class="half right" id="halfB">Sabor B</div>
-          </div>
-        </div>
-
-        <div class="price-row">
-          <p>Preço:</p>
-          <p id="price-value">R$ 0,00</p>
-        </div>
-
-        <div class="final-form">
-          <label>Seu nome</label>
-          <input id="customer-name" placeholder="Nome" />
-          <label>Endereço</label>
-          <input id="customer-address" placeholder="Rua, número, bairro" />
-          <label>Telefone</label>
-          <input id="customer-phone" placeholder="(81) 9 9xxxx-xxxx" />
-        </div>
-
-        <button id="send-whatsapp" class="btn">Enviar pedido por WhatsApp</button>
-      </div>
-    </section>
-
-    <!-- Modal bebidas (simples) -->
-    <div id="modal-bebidas" class="modal hidden">
-      <div class="modal-content">
-        <button class="close-modal">✕</button>
-        <h3>Bebidas</h3>
-        <ul class="bebidas-list">
-          <li>Coca-Cola 2L — R$ 12,00</li>
-          <li>Guaraná 1,5L — R$ 10,00</li>
-          <li>Água 500ml — R$ 4,00</li>
-        </ul>
-      </div>
+        <h2>Acesse também pelo QR Code</h2>
+        <img id="qr" alt="QR Code"
+         src="https://chart.googleapis.com/chart?cht=qr&chs=300x300&chl=https%3A%2F%2Fmarcelosnet-coder.github.io%2Fmarcelopizzas&choe=UTF-8" />
     </div>
-
-  </main>
-  <script src="script.js"></script>
 </body>
 </html>
